@@ -11,6 +11,8 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
+
 // Add configuration
 var configuration = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
@@ -24,10 +26,10 @@ builder.Services.AddSwaggerGen();
 //builder.Configuration = configuration;
 
 // Add services to the container
-builder.Services.AddSingleton<IUserRepository, UserRepository>(sp =>
+builder.Services.AddScoped<IUserRepository, UserRepository>(sp =>
     new UserRepository(configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddSingleton<IUserProvider, UserProvider>();
+builder.Services.AddScoped<IUserProvider, UserProvider>();
 
 
 
