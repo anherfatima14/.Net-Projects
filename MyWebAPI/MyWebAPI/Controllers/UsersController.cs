@@ -7,7 +7,7 @@ using MyWebAPI.Provider;
 namespace MyWebAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UsersController : Controller
     {
         private readonly IUserProvider _userProvider;

@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Microsoft.Data.SqlClient;
 using MyWebAPI.Models;
 using System.Data;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace MyWebAPI.Repository
         public UserRepository(string connectionString)
         {
             this.connectionString = connectionString;
+            _dbConnection = new SqlConnection(connectionString);
         }
 
         public async Task<int> CreateUserAsync(User user)

@@ -11,10 +11,11 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddMvc();
 builder.Services.AddControllers();
 
 // Add configuration
-var configuration = new ConfigurationBuilder()
+var Configuration = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .Build();
@@ -27,7 +28,7 @@ builder.Services.AddSwaggerGen();
 
 // Add services to the container
 builder.Services.AddScoped<IUserRepository, UserRepository>(sp =>
-    new UserRepository(configuration.GetConnectionString("DefaultConnection")));
+    new UserRepository(Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IUserProvider, UserProvider>();
 
@@ -42,9 +43,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                ValidateAudience = true,
                ValidateLifetime = true,
                ValidateIssuerSigningKey = true,
-               ValidIssuer = "Jwt:Issuer",
-               ValidAudience = "Jwt:Issuer",
-               IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Jwt:Key"))
+               ValidIssuer = Configuration["Jwt:Issuer"],
+               ValidAudience = Configuration[ "Jwt:Audience"],
+               IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
            };
        });
 
@@ -60,7 +61,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-//app.UseRouting();
+
+app.UseStaticFiles();
+
+app.UseRouting();
 
 app.UseAuthentication();
 

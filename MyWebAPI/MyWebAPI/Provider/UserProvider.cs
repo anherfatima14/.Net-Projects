@@ -56,8 +56,7 @@ namespace MyWebAPI.Provider
         // Helper method to encrypt password
         private string EncryptPassword(string password)
         {
-            // Implement password encryption logic here
-            // Example: You can use hashing algorithms like SHA256
+
             using (var sha256 = SHA256.Create())
             {
                 var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
@@ -68,11 +67,11 @@ namespace MyWebAPI.Provider
         // Helper method to verify password
         private bool VerifyPassword(string password, string hashedPassword)
         {
-            // Implement logic to verify password
+           
             return EncryptPassword(password) == hashedPassword;
         }
 
-        // Helper method to generate JWT token
+   
         private string GenerateJwtToken(User user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -83,7 +82,7 @@ namespace MyWebAPI.Provider
                 {
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim(ClaimTypes.Email, user.Email),
-                    // Add other claims as needed
+                   
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
