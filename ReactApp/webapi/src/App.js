@@ -10,8 +10,10 @@ function App() {
             <div>
                 <h1>User Authentication and Registration</h1>
                 <Switch>
-                    <Route exact path="/" component={Login} />
-                    <Route path="/register" component={Registration} />
+                    <Route exact path="https://localhost:7297/api/Users/login
+" component={Login} />
+                    <Route path="https://localhost:7297/api/Users/register
+" component={Registration} />
                 </Switch>
             </div>
         </Router>

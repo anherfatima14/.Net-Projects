@@ -34,16 +34,18 @@ namespace MyWebAPI.Controllers
             }
         }
 
-        [HttpPost("login")]
+        [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginRequest request)
         {
-            if (request == null || string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
+            if (request == null || string.IsNullOrEmpty(request.
+                Email) || string.IsNullOrEmpty(request.Password))
                 return BadRequest("Email and password are required.");
 
             try
             {
                 var token = await _userProvider.AuthenticateUserAsync(request.Email, request.Password);
-                if (token == null)
+                //if (token == null)
+                if (string.IsNullOrEmpty(token))
                     return Unauthorized("Invalid email or password.");
 
                 return Ok(new { Token = token });

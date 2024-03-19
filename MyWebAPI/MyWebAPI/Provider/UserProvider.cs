@@ -35,7 +35,7 @@ namespace MyWebAPI.Provider
             return await _userRepository.CreateUserAsync(user);
         }
 
-        public async Task<string> AuthenticateUserAsync(string email, string password)
+        public async Task<string?> AuthenticateUserAsync(string email, string password)
         {
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
@@ -75,7 +75,7 @@ namespace MyWebAPI.Provider
         private string GenerateJwtToken(User user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Secret"]);
+            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]

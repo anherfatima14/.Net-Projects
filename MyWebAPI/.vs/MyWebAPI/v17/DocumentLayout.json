@@ -5,6 +5,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{A65A12AA-2300-49D9-80E2-A5D620678FED}|MyWebAPI\\MyWebAPI.csproj|c:\\workspace\\.net-projects\\.net-projects\\mywebapi\\mywebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A65A12AA-2300-49D9-80E2-A5D620678FED}|MyWebAPI\\MyWebAPI.csproj|solutionrelative:mywebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A65A12AA-2300-49D9-80E2-A5D620678FED}|MyWebAPI\\MyWebAPI.csproj|c:\\workspace\\.net-projects\\.net-projects\\mywebapi\\mywebapi\\provider\\userprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A65A12AA-2300-49D9-80E2-A5D620678FED}|MyWebAPI\\MyWebAPI.csproj|solutionrelative:mywebapi\\provider\\userprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A65A12AA-2300-49D9-80E2-A5D620678FED}|MyWebAPI\\MyWebAPI.csproj|c:\\workspace\\.net-projects\\.net-projects\\mywebapi\\mywebapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A65A12AA-2300-49D9-80E2-A5D620678FED}|MyWebAPI\\MyWebAPI.csproj|solutionrelative:mywebapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A65A12AA-2300-49D9-80E2-A5D620678FED}|MyWebAPI\\MyWebAPI.csproj|c:\\workspace\\.net-projects\\.net-projects\\mywebapi\\mywebapi\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A65A12AA-2300-49D9-80E2-A5D620678FED}|MyWebAPI\\MyWebAPI.csproj|solutionrelative:mywebapi\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserProvider.cs",
+              "DocumentMoniker": "C:\\workspace\\.Net-Projects\\.Net-Projects\\MyWebAPI\\MyWebAPI\\Provider\\UserProvider.cs",
+              "RelativeDocumentMoniker": "MyWebAPI\\Provider\\UserProvider.cs",
+              "ToolTip": "C:\\workspace\\.Net-Projects\\.Net-Projects\\MyWebAPI\\MyWebAPI\\Provider\\UserProvider.cs",
+              "RelativeToolTip": "MyWebAPI\\Provider\\UserProvider.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAYwE0AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T17:02:56.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\workspace\\.Net-Projects\\.Net-Projects\\MyWebAPI\\MyWebAPI\\Models\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "MyWebAPI\\Models\\LoginRequest.cs",
+              "ToolTip": "C:\\workspace\\.Net-Projects\\.Net-Projects\\MyWebAPI\\MyWebAPI\\Models\\LoginRequest.cs",
+              "RelativeToolTip": "MyWebAPI\\Models\\LoginRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T19:58:55.487Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,9 +62,22 @@
               "RelativeDocumentMoniker": "MyWebAPI\\appsettings.json",
               "ToolTip": "C:\\workspace\\.Net-Projects\\.Net-Projects\\MyWebAPI\\MyWebAPI\\appsettings.json",
               "RelativeToolTip": "MyWebAPI\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-03-18T19:42:58.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\workspace\\.Net-Projects\\.Net-Projects\\MyWebAPI\\MyWebAPI\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "MyWebAPI\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\workspace\\.Net-Projects\\.Net-Projects\\MyWebAPI\\MyWebAPI\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "MyWebAPI\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAIwCoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T19:59:46.826Z",
               "EditorCaption": ""
             }
           ]
