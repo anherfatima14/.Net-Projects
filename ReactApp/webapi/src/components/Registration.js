@@ -9,12 +9,13 @@ function Registration() {
     const [mobileNumber, setMobileNumber] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        
         try {
-            const response = await axios.post('/api/register', {
+            const response = await axios.post('https://localhost:7297/api/Users/register', {
                 firstName,
                 lastName,
                 dob,
@@ -27,12 +28,14 @@ function Registration() {
             console.log('Registration successful:', response.data);
         } catch (error) {
             console.error('Registration failed:', error.message);
+            setError('Registration failed. Please try again.');
         }
     };
 
     return (
         <div>
             <h2>Registration</h2>
+            {error && <div className="error">{error}</div>}
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="firstName">First Name:</label>
